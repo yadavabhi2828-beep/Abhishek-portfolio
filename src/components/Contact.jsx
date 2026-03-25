@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MessageSquare, Send } from 'lucide-react';
+import { Linkedin, Mail, MessageSquare, Send } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -21,6 +21,20 @@ const Contact = () => {
                             <div>
                                 <h4 className="font-bold text-slate-300">Email</h4>
                                 <p className="text-slate-500">yadavabhi2828@gmail.com</p>
+                            </div>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/abhishek-yadav-2803532b2"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-6 group"
+                        >
+                            <div className="p-4 bg-cyan-500/10 rounded-2xl group-hover:bg-cyan-500/20 transition-colors">
+                                <Linkedin className="text-cyan-300" size={24} />
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-slate-300">LinkedIn</h4>
+                                <p className="text-slate-500">abhishek-yadav-2803532b2</p>
                             </div>
                         </a>
                         <div className="flex items-center gap-6 group">

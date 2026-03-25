@@ -133,7 +133,7 @@ const Hero = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/abhishek-yadav-2803532b2"
               target="_blank"
               rel="noopener noreferrer"
               className="hero-social"
