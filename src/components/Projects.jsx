@@ -49,39 +49,40 @@ const projects = [
 
 const ProjectCard = ({ project, index }) => (
     <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        viewport={{ once: true }}
-        className="glass-card rounded-2xl overflow-hidden flex flex-col h-full group"
+        transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-50px" }}
+        className="glass-card rounded-2xl overflow-hidden flex flex-col h-full group hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-300 relative"
     >
-        <div className="relative overflow-hidden h-48">
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+        <div className="relative overflow-hidden h-48 border-b border-white/5">
             <img 
                 src={project.image} 
                 alt={project.title} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#030014] to-transparent opacity-60"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#030014] to-transparent opacity-80 backdrop-blur-[2px]"></div>
         </div>
         
-        <div className="p-6 flex flex-col flex-grow">
+        <div className="p-6 flex flex-col flex-grow relative z-10">
             <div className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((t, i) => (
-                    <span key={i} className="text-[10px] font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 px-2 py-1 rounded">
+                    <span key={i} className="text-[10px] font-bold uppercase tracking-wider text-purple-300 bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded backdrop-blur-sm">
                         {t}
                     </span>
                 ))}
             </div>
             
-            <h3 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">{project.title}</h3>
+            <h3 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors drop-shadow-md">{project.title}</h3>
             <p className="text-slate-400 text-sm mb-6 flex-grow">{project.description}</p>
             
-            <div className="flex items-center gap-4 mt-auto">
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors">
-                    <Github size={16} /> Code
+            <div className="flex items-center gap-4 mt-auto pt-4 border-t border-white/5">
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors group/link">
+                    <Github size={16} className="group-hover/link:text-purple-400 transition-colors" /> Code
                 </a>
-                <a href="#" className="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors ml-auto">
-                    Live Demo <ExternalLink size={16} />
+                <a href="#" className="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors ml-auto group/link">
+                    Live Demo <ExternalLink size={16} className="group-hover/link:text-purple-400 transition-colors" />
                 </a>
             </div>
         </div>
@@ -91,11 +92,17 @@ const ProjectCard = ({ project, index }) => (
 const Projects = () => {
     return (
         <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="text-center mb-16"
+            >
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured <span className="text-gradient">Projects</span></h2>
                 <div className="w-20 h-1 bg-purple-600 mx-auto rounded-full mb-6"></div>
-                <p className="text-slate-400 max-w-2xl mx-auto">A showcase of my recent work in AI, Machine Learning, and Intelligent Automation.</p>
-            </div>
+                <p className="text-slate-400 max-w-2xl mx-auto text-lg hover:animate-pulse">A showcase of my recent work in AI, Machine Learning, and Intelligent Automation.</p>
+            </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((p, index) => (
