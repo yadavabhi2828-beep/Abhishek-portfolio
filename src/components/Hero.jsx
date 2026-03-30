@@ -73,7 +73,7 @@ const Hero = () => {
           </div>
 
           <h1 className="max-w-3xl text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-white md:text-7xl">
-            Designing <span className="text-gradient">production-grade AI experiences</span> with a sharper, more human interface.
+            Building <span className="text-gradient">high-performance AI systems</span> that solve real engineering challenges.
           </h1>
 
           <div className="mt-6 max-w-2xl text-xl font-light leading-relaxed text-slate-300/90 md:text-2xl">
@@ -84,8 +84,8 @@ const Hero = () => {
                 words={[
                   'AI & ML systems',
                   'LLM copilots',
-                  'RAG-powered products',
-                  'automation workflows',
+                  'RAG pipelines',
+                  'autonomous agents',
                 ]}
                 loop
                 cursor
@@ -98,9 +98,7 @@ const Hero = () => {
           </div>
 
           <p className="mt-8 max-w-2xl text-base leading-8 text-slate-400 md:text-lg">
-            I turn AI prototypes into polished products by combining model orchestration,
-            retrieval pipelines, fast APIs, and clean front-end experiences that feel reliable
-            under real-world use.
+            I engineer production-ready AI applications. Recently, I built an NLP pipeline that reduced support ticket resolution time by 35% and developed a custom RAG system for scalable document retrieval.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">

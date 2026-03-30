@@ -32,10 +32,10 @@ const About = () => {
                 >
                     <h2 className="text-4xl md:text-5xl font-bold mb-8">About <span className="text-gradient">Me</span></h2>
                     <p className="text-slate-400 leading-relaxed mb-6 text-lg">
-                        I am an AI-focused Computer Engineering student passionate about building Generative AI systems, LLM-powered assistants, and multi-agent automation workflows.
+                        I am an AI-focused Computer Engineering student specializing in production-ready LLM applications, autonomous coding agents, and multi-threaded data extraction systems.
                     </p>
                     <p className="text-slate-400 leading-relaxed mb-8 text-lg">
-                        My expertise lies in designing RAG-based AI applications, intelligent chatbots, and autonomous task agents by integrating LLMs, vector databases, and scalable API pipelines.
+                        I focus on architecture, scalability, and impact. My work spans robust Python backends (FastAPI/Flask), advanced vector similarity search (FAISS, PINECONE), and seamless React-based frontends to deliver complete end-to-end AI products.
                     </p>
                     
                     <div className="grid grid-cols-2 gap-6">
