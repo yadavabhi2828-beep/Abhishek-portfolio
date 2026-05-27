@@ -8,14 +8,15 @@ const projects = [
         description: "Built a medical diagnostic assistant using grounded RAG, improving clinical data retrieval confidence by 40%.",
         tech: ["LLM", "RAG", "Vector DB", "Python"],
         image: "/assets/ai_clinician.png",
-        github: "https://github.com/yadavabhi2828-beep",
+        github: "https://github.com/yadavabhi2828-beep/AI-CLINICIAN",
+        live: "https://ai-clinician.vercel.app"
     },
     {
         title: "Multi-Agent Research Assistant",
         description: "Engineered an autonomous research pipeline that orchestrates planner and extractor agents, reducing manual data synthesis time by 60%.",
         tech: ["LangChain", "LLM", "Web Search", "Python"],
         image: "/assets/research_assistant.png",
-        github: "https://github.com/yadavabhi2828-beep",
+        github: "https://github.com/yadavabhi2828-beep/Multi-Document-RAG-Research-Assistant",
     },
     {
         title: "Fraud Detection System",
@@ -29,7 +30,7 @@ const projects = [
         description: "Developed a domain-specific conversational AI chatbot that handles 100+ daily patient queries with nearly zero hallucination.",
         tech: ["RAG", "LLM", "Python"],
         image: "/assets/physiotherapy_bot.png",
-        github: "https://github.com/yadavabhi2828-beep",
+        github: "https://github.com/yadavabhi2828-beep/Ai-chatbot",
     },
     {
         title: "PDF QA Bot",
@@ -81,9 +82,11 @@ const ProjectCard = ({ project, index }) => (
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors group/link">
                     <Github size={16} className="group-hover/link:text-purple-400 transition-colors" /> Code
                 </a>
-                <a href="#" className="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors ml-auto group/link">
-                    Live Demo <ExternalLink size={16} className="group-hover/link:text-purple-400 transition-colors" />
-                </a>
+                {project.live && (
+                    <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors ml-auto group/link">
+                        Live Demo <ExternalLink size={16} className="group-hover/link:text-purple-400 transition-colors" />
+                    </a>
+                )}
             </div>
         </div>
     </motion.div>
